@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.5.0/semantic.min.css" integrity="sha512-KXol4x3sVoO+8ZsWPFI/r5KBVB/ssCGB5tsv2nVOKwLg33wTFP3fmnXa47FdSVIshVTgsYk/1734xSk9aFIa4A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.5.0/components/form.min.css" integrity="sha512-Cg3LtoyV2P8CQi4rcqHb0ESZzqO1XDuc5u/SBNm6zRjwMp3zT6e9Xced5ZJ1V7wCcwjFAuKjl4Mje+4Q7AZ1Ag==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Frontend Mentor | Base Apparel coming soon page</title>
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+
+      body {
+        background-image: url("./images/bg-pattern-desktop.svg");
+      }
+
+      #square-image {
+        display: none;
+      }
+
+      #desktop-hero {
+        background-color: white;
+      }
+
+      #mobile-hero {
+        display: none;
+      }
+
+      @media all and (max-width: 400px) {
+        #mobile-hero {
+          display: block;
+          background-color: white;
+        }
+
+        #square-image {
+          display: block;
+        }
+
+        #desktop-hero {
+          display: none;
+        }
+      }
+
+      #logo {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-left: 10px;
+        padding-bottom: 10px;
+      }
+
+      footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+      }
+
+      #square-image {
+        width: 100%;
+        object-fit: cover;
+        /* Required to prevent the image from stretching, use the object-position property to adjust the visible area */
+        aspect-ratio: 1.05/1.00;
+        padding-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <img id="logo" class="ui tiny rounded image" src="./images/logo.svg">
+      <div id="desktop-hero" class="ui two column doubling stackable grid container">
+        <div class="column">
+          <div class="ui huge header" style="color:peachpuff; text-align: center;">WE'RE</div>
+          <div class="ui huge header" style="text-align: center;">COMING</div>
+          <div class="ui huge header" style="text-align: center;">SOON</div>
+          <div class="ui tiny header" style="color:maroon; text-align: center;">Hello fellow shoppers! We're currently building our new fashion store. Add your email below to stay up-to-date with announcements and our launch deals.</div>
+          <p></p>
+          <form class="ui form">
+            <div class="field">
+              <label>Email Address</label>
+              <div class="ui action input">
+                <input name=email type="text" placeholder="johndoe@gmail.com">
+                <button class="ui icon button" type="submit">
+                  <i class="sign-in icon"></i>
+                </button>
+              </div>
+            </div>
+            <div class="ui error message"></div>
+          </form>
+        </div>
+        <div class="column">
+          <img class="ui medium rounded image" src="./images/hero-desktop.jpg">
+        </div>
+      </div>
+      <img id="square-image" class="ui medium image" src="./images/hero-desktop.jpg">
+      <div id="mobile-hero" class="ui two column doubling stackable grid container">
+        <div class="column">
+          <div class="ui huge header" style="color:peachpuff; text-align: center;">WE'RE</div>
+          <div class="ui huge header" style="text-align: center;">COMING</div>
+          <div class="ui huge header" style="text-align: center;">SOON</div>
+          <p></p>
+          <div class="ui tiny header" style="color:maroon; text-align: center;">Hello fellow shoppers! We're currently building our new fashion store. Add your email below to stay up-to-date with announcements and our launch deals.</div>
+          <p></p>
+          <form class="ui form">
+            <div class="field">
+              <label>Email Address</label>
+              <div class="ui action input">
+                <input name=email type="text" placeholder="johndoe@gmail.com">
+                <button class="ui icon button" type="submit">
+                  <i class="sign-in icon"></i>
+                </button>
+              </div>
+            </div>
+            <div class="ui error message"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <p class="attribution"> Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="#">Vikram Palakurthi</a>. </p>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.5.0/semantic.min.js" integrity="sha512-Xo0Jh8MsOn72LGV8kU5LsclG7SUzJsWGhXbWcYs2MAmChkQzwiW/yTQwdJ8w6UA9C6EVG18GHb/TrYpYCjyAQw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.5.0/components/form.min.js" integrity="sha512-g9ZwtsAp0ebsmwlSjsMxeh5nlsmuLeH5eKVMeYnhqrOYWGPm0VAFyxc6l1qCeoHPyST/+tWh+S1yyF+TP6ObCA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+      $('.ui.form').form({
+        fields: {
+          email: {
+            identifier: 'email',
+            rules: [{
+              type: 'regExp',
+              value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/ig
+            }, {
+              type: 'empty'
+            }]
+          }
+        }
+      });
+    </script>
+  </body>
+</html>
